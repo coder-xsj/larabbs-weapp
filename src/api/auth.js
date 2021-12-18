@@ -49,7 +49,5 @@ export function setToken(tokenPayload) {
   wx.setStorageSync('access_token_expired_at', accessTokenExpiredAt)
 }
 
-export function logout() {
-  return wx.clearStorage()
-}
+
 

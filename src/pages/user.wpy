@@ -1,15 +1,15 @@
 <template>
-  <div className="page">
-    <div className="page__bd">
-      <div className="weui-panel weui-panel_access">
-        <div className="weui-panel__hd" v-if="isLoggedIn">
+  <div class="page">
+    <div class="page__bd">
+      <div class="weui-panel weui-panel_access">
+        <div class="weui-panel__hd" v-if="isLoggedIn">
           已登录 name: {{ user.name }}
           <button type="warn" v-on:click="logout">退出登录</button>
         </div>
         <div v-else>
-          <a className="weui-cell weui-cell_access" url="/pages/auth/login">
-            <div className="weui-cell__bd">未登录</div>
-            <div className="weui-cell_access weui-cell__ft"></div>
+          <a class="weui-cell weui-cell_access" url="/pages/auth/login">
+            <div class="weui-cell__bd">未登录</div>
+            <div class="weui-cell_access weui-cell__ft"></div>
           </a>
         </div>
       </div>
@@ -24,20 +24,19 @@
 <script>
 import wepy from '@wepy/core'
 import store from '@/store'
-import {mapGetters} from '@wepy/x'
+import { mapGetters } from '@wepy/x'
 
 wepy.page({
   store,
   computed: {
-    ...mapGetters(['user', 'isLoggedIn'])
+    ...mapGetters(['user','isLoggedIn'])
   },
   methods: {
     // 退出
-    async logout() {
+    async logout () {
       try {
         await this.$store.dispatch('logout')
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }
 })
