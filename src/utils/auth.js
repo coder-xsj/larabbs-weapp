@@ -1,12 +1,3 @@
-import { request } from '@/utils/request'
-
-export function login(data) {
-  return request('weapp/authorizations', {
-    method: 'post',
-    data: data
-  })
-}
-
 export function getUser() {
   return wx.getStorageSync('user')
 }
@@ -34,4 +25,3 @@ export function setToken(tokenPayload) {
 export function logout() {
   return wx.clearStorage()
 }
-
