@@ -7,6 +7,24 @@ export function login(data) {
   })
 }
 
+export function logout(token) {
+  return request('authorizations/current', {
+    method: 'delete',
+    header: {
+      'Authorization': 'Bearer ' + token
+    }
+  })
+}
+
+export function refresh(token) {
+  return request('authorizations/current', {
+    method: 'put',
+    header: {
+      'Authorization': 'Bearer ' + token
+    }
+  })
+}
+
 export function getUser() {
   return wx.getStorageSync('user')
 }
