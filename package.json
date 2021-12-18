@@ -16,8 +16,9 @@
   "author": "coder-xsj <fibonacci701408733@163.com>",
   "license": "MIT",
   "dependencies": {
-    "@wepy/x": "^2.0.2",
     "@wepy/core": "^2.0.0-alpha.16",
+    "@wepy/use-promisify": "^2.1.0",
+    "@wepy/x": "^2.0.2",
     "miniprogram-slide-view": "0.0.3"
   },
   "devDependencies": {
