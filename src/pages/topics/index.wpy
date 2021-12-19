@@ -50,28 +50,6 @@
     height: auto;
   }
 }
-.weui-media-box__info__meta {
-  margin: 0;
-  font-size: 12px;
-}
-.topic-info {
-  margin-top: 5px;
-}
-.topic-title {
-  white-space: normal;
-  font-size: 14px;
-}
-.avatar {
-  padding: 4px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  width: 50px;
-  height: 50px;
-}
-.reply-count {
-  background-color: #d8d8d8;
-  float: right;
-}
 </style>
 <template>
   <div class="page">
@@ -100,7 +78,7 @@
       <div class="weui-panel weui-panel_access">
         <div class="weui-panel__bd">
           <div v-for="topic in topics" :key="topic.id">
-            <a url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <a url="/pages/topics/show?id={{topic.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
               <div class="weui-media-box__hd weui-media-box__hd_in-appmsg">
                 <image class="avatar" :src="topic.user.avatar" />
               </div>
@@ -130,7 +108,8 @@
 {
   enablePullDownRefresh: true,
   usingComponents: {
-    "datetime-diff": "~@/components/datetime-diff"
+    "datetime-diff": "~@/components/datetime-diff",
+    "topic-list": "~@/components/topic-list"
   }
 }
 </config>
