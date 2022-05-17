@@ -14,13 +14,24 @@ wepy.use(vuex)
 import promisify  from '@wepy/use-promisify';
 wepy.use(promisify);
 wepy.app({
+  store: require('./store').default,
   async onLaunch() {
+
     // WePY 中使用 Await
     const res = await wepy.wx.login()
     console.log(res)
 
+    this.$store = this.$options.store;
+    this.updateUnreadCount()
+    setInterval(() => {
+      this.updateUnreadCount()
+    }, 60000)
+
   },
   methods: {
+    async updateUnreadCount() {
+      await this.$store.dispatch('updateUnreadCount')
+    }
   }
 })
 </script>
@@ -37,6 +48,7 @@ wepy.app({
     'pages/auth/register',
     'pages/replies/index',
     'pages/replies/user-index',
+    'pages/replies/create',
   ],
   window: {
     backgroundTextStyle: 'light',
