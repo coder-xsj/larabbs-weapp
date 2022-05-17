@@ -74,7 +74,7 @@
         </div>
       </div>
     </div>
-    <div class="page__bd">
+<!--    <div class="page__bd">-->
       <div class="weui-panel weui-panel_access">
         <div class="weui-panel__bd">
           <div v-for="topic in topics" :key="topic.id">
@@ -101,7 +101,7 @@
           </div>
         </div>
       </div>
-    </div>
+<!--    </div>-->
     <topic-list :topics="resourceData" :no-more-data ="noMoreData"></topic-list>
   </div>
 </template>

@@ -6,3 +6,10 @@ export function getReplies(topicId, data) {
     data: data
   })
 }
+
+// 获取用户发布的评论
+export function getUserReplies(userId, data) {
+  return request('users/' + userId + '/replies', {
+    data: data
+  })
+}
