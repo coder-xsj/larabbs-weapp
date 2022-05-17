@@ -1,0 +1,8 @@
+{
+    "enablePullDownRefresh": true,
+    "component": true,
+    "usingComponents": {
+        "datetime-diff": "./../../components/datetime-diff",
+        "topic-list": "./../../components/topic-list"
+    }
+}

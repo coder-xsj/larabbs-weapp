@@ -1,0 +1,27 @@
+
+<view class="weui-panel weui-panel_access">
+  <view class="weui-panel__bd">
+    <view wx:for="{{ topics }}" wx:for-index="index" wx:for-item="topic" wx:key="index" key="{{ topic.id }}">
+      <navigator url="/pages/topics/show?id={{topic.id}}" hover-class="weui-cell_active" class="weui-media-box weui-media-box_appmsg">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image src="{{ topic.user.avatar }}" class="avatar"></image>
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title topic-title">{{ topic.title }}</view>
+
+          <view class="weui-media-box__info topic-info">
+            <view class="weui-media-box__info__meta">{{ topic.category.name }} • </view>
+            <view class="weui-media-box__info__meta">{{ topic.user.name }} • </view>
+            <view class="weui-media-box__info__meta">
+              <datetime-diff bind_init="__initComponent" datetime="{{ topic.updated_at }}"></datetime-diff>
+            </view>
+          </view>
+        </view>
+        <view class="weui-badge reply-count">{{ topic.reply_count }}</view>
+      </navigator>
+    </view>
+    <view wx:if="{{ noMoreData }}" class="weui-loadmore weui-loadmore_line">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多数据</view>
+    </view>
+  </view>
+</view>

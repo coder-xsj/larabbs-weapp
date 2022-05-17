@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "Ta 发布的话题",
+    "enablePullDownRefresh": true,
+    "component": true,
+    "usingComponents": {
+        "topic-list": "./../../components/topic-list"
+    }
+}

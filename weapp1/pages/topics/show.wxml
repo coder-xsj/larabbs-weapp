@@ -1,0 +1,27 @@
+
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      <navigator class="weui-cell">
+        <view class="weui-cell__hd avatar-wrap">
+          <image src="{{ topic.user.avatar }}" class="avatar"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view>{{ topic.user.name }}</view>
+          <view class="page__desc">{{ topic.user.introduction }}</view>
+        </view>
+      </navigator>
+    </view>
+    <view class="topic-title">
+      <view class="page__title">{{ topic.title }}</view>
+      <view class="weui-media-box__info topic-info">
+        <view class="weui-media-box__info__meta">{{ topic.category.name }} • </view>
+        <view class="weui-media-box__info__meta"><datetime-diff bind_init="__initComponent" datetime="{{ topic.updated_at }}"></datetime-diff> • </view>
+        <view class="weui-media-box__info__meta">{{ topic.reply_count }} 次回复</view>
+      </view>
+    </view>
+    <view class="weui-article">
+      <rich-text nodes="{{ topic.body }}"></rich-text>
+    </view>
+  </view>
+</view>

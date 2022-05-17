@@ -1,0 +1,58 @@
+
+<view class="page">
+  <view class="page__bd">
+    
+    <view class="avatar-wrap">
+      <image src="{{ form.avatar }}" data-wpy-evt="9-0" bind:tap="__dispatcher" class="avatar"></image>
+    </view>
+    
+    <view class="weui-cells__title {{ [ errors.name ? 'weui-cell_warn' : '' ] }}">姓名</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input {{ [ errors.name ? 'weui-cell_warn' : '' ] }}">
+        <view class="weui-cell__bd">
+          <input placeholder="请输入姓名" name="name" value="{{ form.name }}" bindinput="__dispatcher" data-model-id="0" class="weui-input" />
+        </view>
+        <view wx:if="{{ errors.name }}" class="weui-cell__ft">
+          <icon type="warn" size="23" color="#E64340"></icon>
+        </view>
+      </view>
+    </view>
+    
+    <view wx:if="{{ errors.name }}" class="weui-cells__tips error-message">{{ errors.name[0] }}</view>
+
+    
+    <view class="weui-cells__title {{ [ errors.email ? 'weui-cell_warn' : '' ] }}">邮箱</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input {{ [ errors.email ? 'weui-cell_warn' : '' ] }}">
+        <view class="weui-cell__bd">
+          <input placeholder="请输入邮箱" name="email" value="{{ form.email }}" bindinput="__dispatcher" data-model-id="1" class="weui-input" />
+        </view>
+        <view wx:if="{{ errors.email }}" class="weui-cell__ft">
+          <icon type="warn" size="23" color="#E64340"></icon>
+        </view>
+      </view>
+    </view>
+    
+    <view wx:if="{{ errors.email }}" class="weui-cells__tips error-message">{{ errors.email[0] }}</view>
+
+    
+    <view class="weui-cells__title {{ [ errors.introduction ? 'weui-cell_warn' : '' ] }}">个人简介</view>
+    <view class="weui-cells weui-cells_after-title {{ [ errors.introduction ? 'weui-cell_warn' : '' ] }}">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea placeholder="请输入简介" name="introduction" value="{{ form.introduction }}" bindinput="__dispatcher" data-model-id="2" class="weui-textarea introduction" />
+        </view>
+        <view wx:if="{{ errors.introduction }}" class="weui-cell__ft">
+          <icon type="warn" size="23" color="#E64340"></icon>
+        </view>
+      </view>
+    </view>
+    
+    <view wx:if="{{ errors.introduction }}" class="weui-cells__tips error-message">{{ errors.introduction[0] }}</view>
+
+    
+    <view class="weui-btn-area">
+      <button type="primary" data-wpy-evt="9-1" bind:tap="__dispatcher" class="weui-btn">修改</button>
+    </view>
+  </view>
+</view>

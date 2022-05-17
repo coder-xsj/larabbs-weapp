@@ -18,6 +18,7 @@ wepy.app({
     // WePY 中使用 Await
     const res = await wepy.wx.login()
     console.log(res)
+
   },
   methods: {
   }
@@ -31,6 +32,7 @@ wepy.app({
     'pages/topics/user-index',
     'pages/users/me',
     'pages/users/edit',
+    'pages/users/show',
     'pages/auth/login',
     'pages/auth/register',
   ],

@@ -1,0 +1,18 @@
+.avatar-wrap {
+  position: relative;
+  margin-right: 10px;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 50%;
+}
+.logout {
+  margin-top: 30px;
+}
+.introduction {
+  font-size: 13px;
+  color: #888888;
+}
+

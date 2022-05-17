@@ -1,0 +1,49 @@
+
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      
+      <navigator wx:if="{{ isLoggedIn }}" url="/pages/users/edit" class="weui-cell weui-cell_access">
+        <view class="weui-cell__hd avatar-wrap">
+          <image src="{{ user.avatar }}" class="avatar"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view>{{ user.name }}</view>
+          <view class="page__desc">{{ user.introduction || '' }}</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      
+      <navigator wx:else url="/pages/auth/login" class="weui-cell weui-cell_access">
+        <view class="weui-cell__hd avatar-wrap">
+          <image src="/assets/images/user.png" class="avatar"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view>未登录</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url class="weui-cell weui-cell_access">
+        <view url class="weui-cell__bd">
+          <view class="weui-cell__bd">我的消息</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="{{ isLoggedIn ? '/pages/topics/user-index?id='+ user.id : '' }}" class="weui-cell weui-cell_access">
+        <view url class="weui-cell__bd">
+          <view class="weui-cell__bd">我的话题</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url class="weui-cell weui-cell_access">
+        <view url class="weui-cell__bd">
+          <view class="weui-cell__bd">我的回复</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+    <view class="page__bd page__bd_spacing logout">
+      <button type="warn" wx:if="{{ isLoggedIn }}" data-wpy-evt="8-1" bind:tap="__dispatcher" class="weui-btn">退出登录</button>
+    </view>
+  </view>
+</view>

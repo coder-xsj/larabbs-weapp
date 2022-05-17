@@ -1,0 +1,5 @@
+@import 'assets/style/app.wxss';
+.page {
+  background-color: #FFFFFF;
+}
+

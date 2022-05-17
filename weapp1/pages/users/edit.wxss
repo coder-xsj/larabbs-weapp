@@ -1,0 +1,19 @@
+.introduction {
+  height: 3.3em;
+}
+.error-message {
+  color: #E64340;
+}
+.avatar {
+  width: 80px;
+  height: 80px;
+  display: block;
+  border-radius: 50%;
+}
+.avatar-wrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

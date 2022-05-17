@@ -13,7 +13,6 @@ export function updateAvatar(avatar) {
     },
     filePath: avatar
   })
-
 }
 
 export function updateUser(data) {
@@ -21,4 +20,8 @@ export function updateUser(data) {
     method: 'PUT',
     data: data
   })
+}
+
+export function getUser(id) {
+  return request('users/' + id)
 }

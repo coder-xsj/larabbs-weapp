@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "datetime-diff": "./datetime-diff"
+    }
+}

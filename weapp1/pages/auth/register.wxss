@@ -1,0 +1,10 @@
+.register-wrap {
+  margin-top: 90px;
+}
+.error-message {
+  color: #E64340;
+}
+.catpcha-img {
+  height: 40px;
+}
+

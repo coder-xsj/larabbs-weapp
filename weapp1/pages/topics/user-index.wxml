@@ -1,0 +1,4 @@
+
+<view class="page__bd">
+  <topic-list bind_init="__initComponent" topics="{{ topics }}" no-more-data="{{ noMoreData }}"></topic-list>
+</view>

@@ -1,0 +1,50 @@
+/*分类*/
+.weui-flex {
+  align-items: center;
+}
+.weui-cells {
+  margin-top: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+.weui-cells:before,
+.weui-cells:after {
+  display: none;
+}
+.weui-cells_show {
+  opacity: 1;
+}
+.weui-cell:before {
+  right: 15px;
+}
+.category-list__item {
+  margin: 10px 0;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.category-list__item:first-child {
+  margin-top: 0;
+}
+.category-list__item_selected {
+  background-color: #eeeeee;
+}
+.category-list__img {
+  width: 30px;
+  height: 30px;
+}
+.category-list__item-hd {
+  padding: 20px;
+  transition: opacity 0.3s;
+}
+.category-list__item-hd_show {
+  opacity: 0.4;
+}
+.category-list__item-bd {
+  height: 0;
+  overflow: hidden;
+}
+.category-list__item-bd_show {
+  height: auto;
+}
+

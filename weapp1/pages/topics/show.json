@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "话题详情",
+    "component": true,
+    "usingComponents": {
+        "datetime-diff": "./../../components/datetime-diff"
+    }
+}
