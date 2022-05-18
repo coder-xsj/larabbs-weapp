@@ -49,6 +49,7 @@ wepy.app({
     'pages/replies/index',
     'pages/replies/user-index',
     'pages/replies/create',
+    'pages/notifications/index',
   ],
   window: {
     backgroundTextStyle: 'light',

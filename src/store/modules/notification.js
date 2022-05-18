@@ -1,6 +1,6 @@
 import wepy from '@wepy/core'
 
-import { getNotificationStats } from '@/api/notification'
+import { getNotificationStats, readNotifications } from '@/api/notification'
 
 const state = {
   unreadCount: 0
@@ -13,6 +13,7 @@ var getters = {
 
 // 定义 actions
 const actions = {
+  // 更新通知数量
   async updateUnreadCount ({ commit, getters }, params = {}) {
     if (!getters.isLoggedIn) {
       return
@@ -21,6 +22,11 @@ const actions = {
     const statsResponse = await getNotificationStats({}, false)
 
     commit('setUnreadCount', statsResponse.data.unread_count)
+  },
+  // 设置已读
+  async readNotifications ({ commit }, parmams = {}) {
+    const statsResponse = await readNotifications()
+    commit('setUnreadCount', 0)
   }
 }
 
