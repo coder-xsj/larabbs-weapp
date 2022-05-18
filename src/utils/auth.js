@@ -25,3 +25,12 @@ export function setToken(tokenPayload) {
 export function logout() {
   return wx.clearStorage()
 }
+
+// 获取用户的权限
+export function getPerms() {
+  return wx.getStorageSync('perms')
+}
+
+export function setPerms(perms) {
+  return wx.setStorageSync('perms', perms)
+}
