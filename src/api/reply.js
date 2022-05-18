@@ -21,3 +21,10 @@ export function createReply(topicId, data) {
     data: data
   })
 }
+
+// 删除评论
+export function deleteReply(topicId, replyId) {
+  return authRequest('topics/' + topicId + '/replies/' + replyId, {
+    method: 'DELETE',
+  })
+}
